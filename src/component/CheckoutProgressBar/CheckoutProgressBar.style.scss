@@ -1,0 +1,175 @@
+.CheckoutProgressBar {
+    display: flex;
+    box-sizing: border-box;
+    
+    width: 100%;
+    height: 15vh;
+    background-color: var(--breadcrumbs-background);
+    margin-bottom: 5vw;
+
+    &-Element {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        box-sizing: border-box;
+        
+        
+        align-items: center;
+
+        &_col2 {
+            width: calc(100%/2);
+        }
+        &_col3 {
+            width: calc(100%/3);
+        }
+        &_col4 {
+            width: calc(100%/4);
+
+        }
+        &_col5 {
+            width: calc(100%/5);
+        }
+    }
+
+    &-DisplayBlock {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    &-BarBlock {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    &-BarBorder {
+        width: 100%;
+        border: 1px solid var(--breadcrumbs-active-color);
+        height: 5px;
+        border-radius: 10px;
+        background-color: var(--primary-divider-color);
+        margin-left: 1vh;
+        margin-right: 1vh;
+    }
+   
+        
+    
+
+    &-BarBody {
+        width: 0;
+        height: 100%;
+        border-radius: 10px;
+        padding-right: 15px;
+        border-color: var(--primary-base-color);
+        transition: ease-in-out 0.5s;
+
+        
+
+        &_active {
+            width: 100%;
+            background-color: var(--primary-base-color);
+        }
+        
+        &_first {
+            width: 100%;
+            background-color: var(--primary-base-color);
+            margin-left: -2vh;
+        }
+
+        &_last {
+            width: 100%;
+            background-color: var(--primary-base-color);
+            margin-right: -3vh;
+        }
+        
+        &_idle {
+            width: 100%;
+            background-color: var(--primary-base-color);
+        }
+
+        
+    }
+
+    &-LabelContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        
+    }
+    &-OKPoint {
+        display: flex;
+        border-radius: 50%;
+        background-color: var(--primary-base-color);        
+        align-items: center;
+        justify-content: center;
+        height: 2vw;
+        width: 2vw;
+
+        &_idle{
+            border: 2px solid var(--breadcrumbs-active-color);
+            color: var(--breadcrumbs-active-color);
+            background-color: var(--breadcrumbs-background);
+            font-size: 12px;
+        }
+
+        &_none {
+            display: none;
+        }
+
+        &_active {
+            background-color: var(--primary-base-color);
+            color: var(--color-white);
+            
+        }
+
+        // &_postactive {
+        //     background-color: var(--primary-base-color);
+        //     color: var(--color-white);
+        // }
+        
+
+    }
+
+    &-Title {
+        display: flex;
+        font-size: 16px;
+        font-weight: 400;
+        
+        
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-left: 30%;
+        text-align: center;
+        margin-right: -7%;
+                
+    }
+
+    &-TitleContainer {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+     
+        box-sizing: border-box;
+    }
+
+    &-Item {
+        display: flex;
+
+        &_none {
+            visibility: hidden;
+        }
+
+        &_idle {
+            color: var(--breadcrumbs-active-color)
+        }
+
+        
+    }
+}
